@@ -17,7 +17,7 @@ class Banca implements Runnable {
         Map<Integer, String> l_mapaBanca = HashMap.newHashMap(10);
 
         // Bucle para generar la lista de la banca
-        for (l_Contador = 0; l_Contador < 10; l_Contador++) {
+        for (l_Contador = 0; l_Contador <= 10; l_Contador++) {
             l_NumAleatorio = (int) Math.floor(Math.random() * 100 + 1);
             l_mapaBanca.put(l_NumAleatorio, null);
         }
@@ -32,7 +32,7 @@ class Banca implements Runnable {
             l_NumTiradas++;
 
             // Si la tirada del jugador coindice con un numero en el mapa y no hay un ganador, se ejecuta el siguiente codigo
-            if (l_mapaBanca.containsKey(a_Buzon.a_Tirada)) { // si añado '&& l_mapaBanca.get(a_Buzon.a_Tirada).equals(null)' peta
+            if (l_mapaBanca.containsKey(a_Buzon.a_Tirada) && l_mapaBanca.get(a_Buzon.a_Tirada) == null) {
                 // Se cambia el mapa para añadir al jugador que ha acertado
                 l_mapaBanca.put(a_Buzon.a_Tirada, a_Buzon.a_Jugador);
 

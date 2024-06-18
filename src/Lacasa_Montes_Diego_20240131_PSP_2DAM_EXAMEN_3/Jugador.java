@@ -3,6 +3,7 @@ package Lacasa_Montes_Diego_20240131_PSP_2DAM_EXAMEN_3;
 class Jugador implements Runnable {
     private final Buzon a_Buzon;
     private final String a_Jugador;
+
     public Jugador(Buzon p_Buzon, String p_Jugador) {
         this.a_Buzon = p_Buzon;
         this.a_Jugador = p_Jugador;
